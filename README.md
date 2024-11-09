@@ -11,3 +11,4 @@ def get_duration(playlist: Iterable, n: int) -> Any:
         song_duration_dict = playlist
     else:
         raise ValueError("Invalid playlist format")
+n = min(n, len(song_duration_dict))
