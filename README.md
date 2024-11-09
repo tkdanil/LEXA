@@ -14,3 +14,4 @@ def get_duration(playlist: Iterable, n: int) -> Any:
     n = min(n, len(song_duration_dict))
     selected_songs = random.sample(list(song_duration_dict.items()), n)
     total_duration = sum(duration for song, duration in selected_songs)
+    return timedelta(hours=int(total_duration // 60), minutes=int(total_duration % 60))
