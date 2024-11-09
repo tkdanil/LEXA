@@ -13,3 +13,4 @@ def get_duration(playlist: Iterable, n: int) -> Any:
         raise ValueError("Invalid playlist format")
     n = min(n, len(song_duration_dict))
     selected_songs = random.sample(list(song_duration_dict.items()), n)
+    total_duration = sum(duration for song, duration in selected_songs)
